@@ -1,50 +1,63 @@
+/* ---------- Base ---------- */
 :root{
-  --bg:#f7f7f8; --card:#ffffff; --ink:#1f2937; --muted:#6b7280; --brand:#0ea5e9;
-  --radius:16px; --shadow:0 8px 30px rgba(0,0,0,.06);
-  --max:1100px;
+  --bg:#f9f9f9; --card:#fff; --ink:#333; --muted:#555; --accent:#25d366; --ig:#d62976;
+  --max:1100px; --radius:16px; --shadow:0 8px 30px rgba(0,0,0,.08);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 'Segoe UI',sans-serif}
 img{display:block;max-width:100%;height:auto;border-radius:12px}
-a{text-decoration:none}
 
+/* ---------- Layout helpers ---------- */
 .container{max-width:var(--max);margin:0 auto;padding:24px}
-
-.header{background:linear-gradient(180deg,#ffffff 0%,#f0f7ff 100%);border-bottom:1px solid #e5e7eb}
-.hero{display:grid;place-items:center;text-align:center;gap:10px;padding:48px 0}
-.hero h1{margin:0;font-size:clamp(28px,5vw,44px)}
-.hero p{margin:0;color:var(--muted)}
-.btn{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:600}
-.cta{background:var(--brand);color:#fff}
-.cta:hover{filter:brightness(.95)}
-
 .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin:28px 0}
-h2{margin:0 0 12px 0;font-size:clamp(22px,3.5vw,30px)}
-.section-desc{margin:0 0 14px;color:var(--muted)}
 
-.grid{
+/* ---------- Header ---------- */
+.header{ text-align:center; padding:3rem 1rem; background:#eae7dc; }
+.header h1{ margin:0; font-size:clamp(2rem,5vw,2.8rem); color:#2d2d2d; }
+.header p{ margin:.5rem 0 0; font-size:clamp(1rem,2.5vw,1.15rem); color:var(--muted); }
+
+/* ---------- Galería (responsive grid) ---------- */
+.galeria{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:14px;
+  padding:2rem 0;
 }
-.item{position:relative;background:#eaecef;border-radius:12px;overflow:hidden;aspect-ratio:4/3}
-.item img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
-.item:hover img{transform:scale(1.03)}
-.caption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(0,0,0,.55);color:#fff;padding:6px 10px;border-radius:10px;font-size:.9rem}
-
-.footer{padding:28px 0 48px;text-align:center;color:var(--muted);}
-
-/* Botones flotantes */
-.fab{
-  position:fixed;right:16px;z-index:9999;width:56px;height:56px;border-radius:50%;
-  display:grid;place-items:center;box-shadow:var(--shadow);font-weight:800;color:#fff
+.galeria img{
+  width:100%; height:100%; aspect-ratio:4 / 3;
+  object-fit:cover; /* recorte elegante, no deforma */
+  border-radius:12px; cursor:pointer; transition:transform .3s;
 }
-.fab-wa{bottom:16px;background:#25D366}
-.fab-ig{bottom:84px;background:#d62976}
-.fab-ig svg{width:26px;height:26px;fill:#fff}
+.galeria img:hover{ transform:scale(1.03); }
+.galeria h2{ grid-column:1/-1; margin:0 0 .5rem; text-align:center; }
 
-/* Pequeñas mejoras móviles */
-@media (max-width:480px){
-  .container{padding:18px}
-  .hero{padding:34px 0}
+/* ---------- Materiales ---------- */
+.materiales{ text-align:center; background:#fff; padding:2rem 1rem; }
+.materiales img{ max-width:520px; width:100%; border-radius:12px; margin-top:1rem; }
+
+/* ---------- Footer (opcional si lo usas) ---------- */
+.footer{ text-align:center; color:var(--muted); padding:28px 0 48px; }
+
+/* ---------- Botones flotantes ---------- */
+.whatsapp-float{
+  position:fixed; right:20px; bottom:20px; z-index:1000;
+  width:60px; height:60px; border-radius:50%; display:grid; place-items:center;
+  background:var(--accent); box-shadow:0 4px 10px rgba(0,0,0,.3); transition:transform .2s ease-in-out;
+}
+.whatsapp-float img{ width:32px; height:32px; filter:brightness(0) invert(1); }
+.whatsapp-float:hover{ transform:scale(1.08); }
+
+.instagram-btn{
+  position:fixed; left:20px; bottom:90px; z-index:999;
+  display:inline-flex; align-items:center; gap:8px;
+  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  color:#fff; padding:10px 16px; border-radius:30px; font-weight:700; text-decoration:none;
+  box-shadow:0 4px 10px rgba(0,0,0,.25); transition:transform .2s ease-in-out, opacity .2s;
+}
+.instagram-btn:hover{ transform:scale(1.05); opacity:.92; }
+.instagram-btn svg{ width:22px; height:22px; fill:#fff; }
+
+/* ---------- Responsividad fina ---------- */
+@media (max-width: 768px){
+  .container{ padding:18px; }
 }
