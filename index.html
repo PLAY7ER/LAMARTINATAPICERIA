@@ -1,76 +1,72 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>TAPICERIA LA MARTINA</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tapicería La Martina</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="header">
-    <h1>Tapicería La Martina</h1>
-    <p>Diseño, confort y calidad en cada detalle</p>
+    <div class="container hero">
+      <h1>Tapicería La Martina</h1>
+      <p>Diseño, confort y calidad en cada detalle</p>
+      <a class="btn cta" href="https://wa.me/5491144143079?text=Hola%20La%20Martina,%20quiero%20un%20presupuesto" target="_blank" rel="noopener">Pedir presupuesto</a>
+    </div>
   </header>
 
-  <!-- Galería de trabajos -->
- <section id="trabajos">
-  <h2>Nuestros Trabajos</h2>
-  <div class="galeria">
-    <img src="mueble1.jpg" alt="Sillones tapizados en blanco">
-    <img src="mueble2.jpg" alt="Juego de sillones de exterior en madera y negro">
-    <img src="mueble3.jpg" alt="Comedor con sillas tapizadas en blanco">
-  </div>
-</section>
+  <main class="container">
+    <!-- Trabajos -->
+    <section id="trabajos" class="card">
+      <h2>Nuestros Trabajos</h2>
+      <p class="section-desc">Restauración y tapizado a medida para living, comedor y exterior.</p>
 
-<section id="materiales">
-  <h2>Materiales y Telas</h2>
-  <div class="galeria">
-    <img src="muestras.jpg" alt="Muestras de telas de varios colores">
-  </div>
-</section>
+      <div class="grid">
+        <figure class="item">
+          <img src="mueble1.jpg" alt="Sillones tapizados en blanco">
+          <figcaption class="caption">Sillones • Living</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="mueble2.jpg" alt="Juego de sillones de exterior en madera y negro">
+          <figcaption class="caption">Conjunto exterior</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="mueble3.jpg" alt="Comedor con sillas tapizadas en blanco">
+          <figcaption class="caption">Comedor • Sillas</figcaption>
+        </figure>
+      </div>
+    </section>
 
+    <!-- Materiales -->
+    <section id="materiales" class="card">
+      <h2>Materiales y Telas</h2>
+      <p class="section-desc">
+        Trabajamos con telas resistentes, modernas y de alta calidad. Antimancha, microfibra, pana, lino y más.
+      </p>
+      <div class="grid">
+        <figure class="item">
+          <!-- usa el mismo archivo que subiste a la raíz -->
+          <img src="muestras.jpg" alt="Muestras de telas de varios colores">
+          <figcaption class="caption">Muestrario de telas</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
 
-  <!-- Sección de materiales -->
-  <section class="materiales">
-    <h2>Materiales y Telas</h2>
-    <p>Trabajamos con telas resistentes, modernas y de alta calidad. 
-       Podés elegir entre múltiples texturas y colores para personalizar tu mueble.</p>
-    <img src="img/muestras.jpg" alt="Muestras de telas">
-  </section>
+  <footer class="footer">
+    <div class="container">
+      © <span id="y"></span> Tapicería La Martina — 
+      <a class="link" href="https://www.instagram.com/tapicerialamartina" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
 
- <!-- Botón de WhatsApp flotante -->
-<a href="https://wa.me/5491144143079" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
-
+  <!-- Botones flotantes -->
+  <a href="https://wa.me/5491144143079" class="fab fab-wa" target="_blank" aria-label="WhatsApp" rel="noopener">WA</a>
+  <a href="https://www.instagram.com/tapicerialamartina" class="fab fab-ig" target="_blank" aria-label="Instagram" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.9.5.5.7.9.9 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.9 1.5-.5.5-.9.7-1.5.9-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .9-1.5.5-.5.9-.7 1.5-.9.5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm6.4-.9a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0zM12 7.8a4.2 4.2 0 110 8.4 4.2 4.2 0 010-8.4z"/></svg>
+  </a>
 
   <script src="script.js"></script>
-</body>
-</html>
-<a href="https://www.instagram.com/tapicerialamartina" 
-   target="_blank" 
-   class="instagram-btn">
-   <svg xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 24 24" 
-        width="24" height="24" 
-        fill="currentColor">
-     <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.9.5.5.7.9.9 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.9 1.5-.5.5-.9.7-1.5.9-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .9-1.5.5-.5.9-.7 1.5-.9.5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7 0 5.7.1 4.6.2 3.8.5 3 .8 2.2 1.3 1.5 2c-.7.7-1.2 1.5-1.5 2.3-.3.8-.4 1.9-.5 3.2C0 8.8 0 9.2 0 12s0 3.2.1 4.5c.1 1.3.2 2.4.5 3.2.3.8.8 1.6 1.5 2.3.7.7 1.5 1.2 2.3 1.5.8.3 1.9.4 3.2.5 1.3.1 1.7.1 4.5.1s3.2 0 4.5-.1c1.3-.1 2.4-.2 3.2-.5.8-.3 1.6-.8 2.3-1.5.7-.7 1.2-1.5 1.5-2.3.3-.8.4-1.9.5-3.2.1-1.3.1-1.7.1-4.5s0-3.2-.1-4.5c-.1-1.3-.2-2.4-.5-3.2-.3-.8-.8-1.6-1.5-2.3-.7-.7-1.5-1.2-2.3-1.5C19.4.2 18.3.1 17 0c-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.5a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z"/>
-   </svg>
-   Instagram
-</a>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
 </body>
 </html>
